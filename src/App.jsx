@@ -1,11 +1,12 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import { AppLayout } from './layout/AppLayout'
-import { Home } from "./Components/Home"
+import { Home } from "./Components/Home/Home"
 import { About } from "./Components/About"
 import { Products } from "./Components/Products"
 import { Contact } from "./Components/Contact"
 import { Cart } from "./Components/Cart"
+import { ProductDetails } from './Components/product Details/ProductDetails'
 
 function App() {
   const router = createBrowserRouter([
@@ -14,7 +15,7 @@ function App() {
       element: <AppLayout />,
       children: [
         {
-          path: "/home",
+          path: "/",
           element: <Home />
         },
         {
@@ -24,6 +25,10 @@ function App() {
         {
           path: "/products",
           element: <Products />
+        },
+        {
+          path: "/products/:id",
+          element: <ProductDetails />
         },
         {
           path: "/contact",
@@ -39,7 +44,6 @@ function App() {
 
   return (
   <RouterProvider router={router}>
-
 
   </RouterProvider>
   )
