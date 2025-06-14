@@ -7,7 +7,7 @@ import { Product } from "./Product";
 export const Home = () => {
   const { loading, products } = useContext(ProductContext);
   // console.log(products);
-  let featured = products.slice(5, 111)
+  let featured = products.slice(0, 41)
 
   if (loading) {
     return <div className="loading">Loading...</div>;
