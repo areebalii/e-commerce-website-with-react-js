@@ -1,7 +1,12 @@
+import { createContext } from "react"
 import { NavLink } from "react-router-dom"
+import { ProductContext } from "../../Product context/ProductContext"
 
 export const Product = ({ product }) => {
-  if(!product) return null
+
+  const { addToCart } = createContext(ProductContext)
+  if (!product) return null
+
   return (
     <>
       <div className="product-card" key={product.id}>
@@ -11,6 +16,8 @@ export const Product = ({ product }) => {
         <NavLink to={`/products/${product.id}`} className="detail-btn">
           View Details
         </NavLink>
+
+        <button className="addToCart" onClick={() => addToCart(product)}>Add to Cart</button>
       </div >
     </>
   )

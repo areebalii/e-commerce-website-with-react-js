@@ -19,9 +19,18 @@ export const ProductProvider = ({ children }) => {
   useEffect(() => {
     apiData();
   }, [])
+  
 
   // Cart Context
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const saveToCart = localStorage.getItem("cart")
+    return saveToCart ? JSON.parse(saveToCart) : [];
+  });
+
+    useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart) || []);
+  }, [cart])
+
   const addToCart = ((product) => {
     setCart((prevCart) => {
       const isExist = prevCart.find((item) => item.id === product.id)

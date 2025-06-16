@@ -5,6 +5,8 @@ import "./Cart.css"
 export const Cart = () => {
   const { cart, updateQuantity, removeFromCart } = useContext(ProductContext);
 
+
+
   return (
     <>
       <div className="cart-contain">

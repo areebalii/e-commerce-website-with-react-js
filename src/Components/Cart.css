@@ -64,3 +64,16 @@
 .cart-item button:hover {
   background-color: #dc2626;
 }
+
+.addToCart{
+  padding: 0.8rem 1.2rem;
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.addToCart:hover{
+  background-color: #1d4ed8;
+}
