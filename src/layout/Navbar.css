@@ -48,3 +48,21 @@
 .cart {
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .navbar-links {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 550px) {
+  .nav-item {
+    font-size: 14px;
+  }
+  .navbar-links{
+    gap: 3px;
+  }
+}

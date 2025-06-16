@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { ProductContext } from "../Product context/ProductContext";
-import { Product } from "./Home/Product";
-import "../App.css";
+import { ProductContext } from "../../Product context/ProductContext";
+import { Product } from "./Product";
+// import "../../App.css";
 
 export const Products = () => {
   const { loading, products } = useContext(ProductContext);
@@ -59,7 +59,7 @@ export const Products = () => {
         <section className="products-grid">
           {
             currentProducts.map((product) => (
-              <Product product={product} key={product.id} />
+              <Product product={product} key={product.id}  />
             ))
           }
         </section>

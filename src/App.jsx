@@ -3,10 +3,10 @@ import './App.css'
 import { AppLayout } from './layout/AppLayout'
 import { Home } from "./Components/Home/Home"
 import { About } from "./Components/About/About"
-import { Products } from "./Components/Products"
+import { Products } from "./Components/product/Products"
 import { Contact } from "./Contact/Contact"
 import { Cart } from "./Components/Cart"
-import { ProductDetails } from './Components/product Details/ProductDetails'
+import { ProductDetails } from './Components/product/ProductDetails'
 
 function App() {
   const router = createBrowserRouter([

@@ -1,10 +1,10 @@
-import { createContext } from "react"
+import { useContext } from "react"
 import { NavLink } from "react-router-dom"
 import { ProductContext } from "../../Product context/ProductContext"
 
 export const Product = ({ product }) => {
 
-  const { addToCart } = createContext(ProductContext)
+  const { addToCart } = useContext(ProductContext)
   if (!product) return null
 
   return (
@@ -13,11 +13,12 @@ export const Product = ({ product }) => {
         <img src={product.image} alt={`Product ${product.title}`} />
         <h3>{product.title.length >= 19 ? `${product.title.slice(0, 18)}...` : product.title}</h3>
         <p className="price">$19.99</p>
-        <NavLink to={`/products/${product.id}`} className="detail-btn">
-          View Details
-        </NavLink>
-
-        <button className="addToCart" onClick={() => addToCart(product)}>Add to Cart</button>
+        <div className="btn">
+          <NavLink to={`/products/${product.id}`} className="detail-btn">
+            View Details
+          </NavLink>
+          <button className="addToCart" onClick={() => addToCart(product)}>Add to Cart</button>
+        </div>
       </div >
     </>
   )

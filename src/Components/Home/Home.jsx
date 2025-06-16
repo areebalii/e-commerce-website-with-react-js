@@ -2,7 +2,7 @@ import { useContext } from "react";
 import "./Home.css";
 import { NavLink } from "react-router-dom";
 import { ProductContext } from "../../Product context/ProductContext";
-import { Product } from "./Product";
+import { Product } from "../product/Product";
 
 export const Home = () => {
   const { loading, products } = useContext(ProductContext);
