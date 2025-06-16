@@ -2,9 +2,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import { AppLayout } from './layout/AppLayout'
 import { Home } from "./Components/Home/Home"
-import { About } from "./Components/About"
+import { About } from "./Components/About/About"
 import { Products } from "./Components/Products"
-import { Contact } from "./Components/Contact"
+import { Contact } from "./Contact/Contact"
 import { Cart } from "./Components/Cart"
 import { ProductDetails } from './Components/product Details/ProductDetails'
 

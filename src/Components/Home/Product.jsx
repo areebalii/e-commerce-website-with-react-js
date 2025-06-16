@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 
 export const Product = ({ product }) => {
+  if(!product) return null
   return (
     <>
       <div className="product-card" key={product.id}>

@@ -8,7 +8,7 @@ export const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState("M");
   const [Quantity, setQuantity] = useState(1);
   const { id } = useParams();
-  const { loading, products } = useContext(ProductContext);
+  const { loading, products, addToCart } = useContext(ProductContext);
 
   useEffect(() => {
     if (!loading) {
@@ -74,7 +74,7 @@ export const ProductDetails = () => {
           </label>
           {/* price */}
           <p className="price">${product.price}</p>
-          <button className="btn-primary">Add to Cart</button>
+          <button className="btn-primary" onClick={() => addToCart(product)}>Add to Cart</button>
         </div>
       </div>
 
