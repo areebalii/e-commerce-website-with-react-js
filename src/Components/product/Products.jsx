@@ -7,6 +7,7 @@ export const Products = () => {
   const { loading, products } = useContext(ProductContext);
   const [selectCategory, setSelectCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
+  const Categories = ["All", "Electronics", "Clothing", "jewelery", "Books"];
   const productPerPage = 12;
 
   const filteredProducts = selectCategory === "All" ? products : products.filter((pro) => (
@@ -39,7 +40,7 @@ export const Products = () => {
         <aside className="category-sidebar">
           <h3>Categories</h3>
           <ul>
-            {["All", "Electronics", "Clothing", "jewelery", "Books"].map((cat) => (
+            {Categories.map((cat) => (
               <li
                 key={cat}
                 className={selectCategory === cat ? "active-category" : ""}

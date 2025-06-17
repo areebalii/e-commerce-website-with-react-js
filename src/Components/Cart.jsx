@@ -5,8 +5,13 @@ import "./Cart.css"
 export const Cart = () => {
   const { cart, updateQuantity, removeFromCart } = useContext(ProductContext);
 
-
-
+  if (cart.length === 0) {
+    return (
+      <div className="cart-contain">
+        <h2>Your Cart is Empty</h2>
+      </div>
+    )
+  }
   return (
     <>
       <div className="cart-contain">
