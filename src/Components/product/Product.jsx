@@ -17,7 +17,7 @@ export const Product = ({ product }) => {
           <NavLink to={`/products/${product.id}`} className="detail-btn">
             View Details
           </NavLink>
-          <button className="addToCart" onClick={() => addToCart(product)}>Add to Cart</button>
+          {/* <button className="addToCart" onClick={() => addToCart(product)}>🛒</button> */}
         </div>
       </div >
     </>

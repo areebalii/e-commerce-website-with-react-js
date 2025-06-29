@@ -126,7 +126,7 @@
 
 /* View Details Button */
 .product-card .detail-btn {
-  background-color: #007bff;
+  background-color:rgb(0, 0, 0);
 }
 
 .product-card .detail-btn:hover {
