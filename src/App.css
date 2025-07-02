@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+  /* background-color: #f0f2f5; */
+}
 
 .all-products {
   text-align: center;
@@ -242,3 +245,4 @@
     font-size: 0.85rem;
   }
 }
+

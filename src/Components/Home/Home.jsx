@@ -19,7 +19,7 @@ export const Home = () => {
       <section className="hero">
         <div className="hero-text">
           <h1>Customized Printed Teese</h1>
-          <p>Your one-stop shop for the latest and greatest products.</p>
+          <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
           <NavLink to="/products">
             <button className="btn-primary">
               Shop Now
@@ -40,18 +40,30 @@ export const Home = () => {
           ))}
         </div>
       </section>
+
+
       {/* categories */}
       <section className="categories">
-        <h2>Shop by Category</h2>
+        <h2>BROWSE BY CATEGORY</h2>
         <div className="category-grid">
-          {/* Sample categories */}
-          <div className="category-card">👕 T-Shirts</div>
-          <div className="category-card">📱 Electronics</div>
-          <div className="category-card">💼 Bags</div>
-          <div className="category-card">⌚ Watches</div>
+          <NavLink to="/category/men" className="category-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3233/3233483.png" alt="Men Clothing" />
+            <strong>Men Clothing</strong>
+          </NavLink>
+          <NavLink to="/category/women" className="category-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3233/3233483.png" alt="Women" />
+            <strong>Women</strong>
+          </NavLink>
+          <NavLink to="/category/jewelry" className="category-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" alt="Jewelry" />
+            <strong>Jewelry</strong>
+          </NavLink>
+          <NavLink to="/category/electronics" className="category-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="Electronics" />
+            <strong>Electronics</strong>
+          </NavLink>
         </div>
       </section>
-
 
       {/* Call to Action */}
       <section className="cta">
