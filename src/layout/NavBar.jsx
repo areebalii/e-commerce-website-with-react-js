@@ -9,6 +9,11 @@ export const NavBar = () => {
           E-Store
         </NavLink>
 
+        <div className="search">
+          <input type="text" placeholder="Search products..." />
+          <button type="submit"><i className="fas fa-search"></i></button>
+        </div>
+
         <div className="navbar-links">
           <NavLink to="/" className="nav-item">Home</NavLink>
           <NavLink to="/about" className="nav-item">About</NavLink>

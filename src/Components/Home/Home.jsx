@@ -8,6 +8,7 @@ export const Home = () => {
   const { loading, products } = useContext(ProductContext);
   // console.log(products);
   let featured = products.slice(0, 4)
+  let newArrivals = products.slice(15, 19)
 
   if (loading) {
     return <div className="loading">Loading...</div>;
@@ -18,7 +19,7 @@ export const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-text">
-          <h1>Customized Printed Teese</h1>
+          <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
           <p>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
           <NavLink to="/products">
             <button className="btn-primary">
@@ -31,6 +32,15 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* new Arrivals */}
+      <section className="featured-products">
+        <h2>New Arrivals</h2>
+        <div className="product-grid">
+          {newArrivals.map((product) => (
+            <Product key={product.id} product={product} />
+          ))}
+        </div>
+      </section>
       {/* Featured Products */}
       <section className="featured-products">
         <h2>Featured Products</h2>
@@ -47,19 +57,19 @@ export const Home = () => {
         <h2>BROWSE BY CATEGORY</h2>
         <div className="category-grid">
           <NavLink to="/category/men" className="category-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3233/3233483.png" alt="Men Clothing" />
+            <img src="https://mjshopco.vercel.app/assets/menClothing.jpg" alt="Men Clothing" />
             <strong>Men Clothing</strong>
           </NavLink>
           <NavLink to="/category/women" className="category-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3233/3233483.png" alt="Women" />
+            <img src="https://mjshopco.vercel.app/assets/womenClothing.jpg" alt="Women" />
             <strong>Women</strong>
           </NavLink>
           <NavLink to="/category/jewelry" className="category-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/2583/2583344.png" alt="Jewelry" />
+            <img src="https://mjshopco.vercel.app/assets/jewelry.jpg" alt="Jewelry" />
             <strong>Jewelry</strong>
           </NavLink>
           <NavLink to="/category/electronics" className="category-card">
-            <img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" alt="Electronics" />
+            <img src="https://mjshopco.vercel.app/assets/electronics.jpg" alt="Electronics" />
             <strong>Electronics</strong>
           </NavLink>
         </div>
