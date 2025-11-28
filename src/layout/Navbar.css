@@ -21,9 +21,7 @@
   text-decoration: none;
 }
 
-.search {
-  
-}
+
 .search input{
   padding: 8px 12px;
   border: 1px solid black;
@@ -85,5 +83,10 @@
   }
   .navbar-links{
     gap: 3px;
+  }
+}
+@media (max-width: 400px) {
+  .search input {
+    width: 150px;
   }
 }

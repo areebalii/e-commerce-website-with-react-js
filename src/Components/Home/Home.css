@@ -340,3 +340,9 @@
     font-size: 1rem;
   }
 }
+
+@media (max-width: 601px) {
+  .btn-primary{
+    width: 100%;
+  }
+}
